@@ -4,8 +4,14 @@
 .hight {
   display: flex;
   justify-content: space-around;
+  align-content: space-between;
+  padding: 15px;
+  
 }
 
+.width {
+  width: 25%;
+}
 .in-progress {
   height: 30px;
   width: 10px;

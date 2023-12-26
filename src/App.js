@@ -32,6 +32,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Add todo</h1>
       <form>
         <label>Title:</label>{" "}
         <input
@@ -56,22 +57,29 @@ function App() {
         </div>
         <label>Progress:</label>
         <select value={progress} onChange={(e) => setProgress(e.target.value)}>
-          <option>Choose a status</option>
+          <option>Status</option>
           <option value="in-progress">in-progress</option>
           <option value="done">done</option>
           <option value="not-started">not-started</option>
         </select>
       </form>
-      <br></br>
-      <button onClick={() => addTodo(input)}>Submit</button>
-      <div className="parent">
+
+      <p>
+        {" "}
+        <button onClick={() => addTodo(input)}>Submit</button>
+      </p>
+      <div>
         <h1>to do list</h1>
         {list.map((todo) => {
           return (
             <div key={todo.id} className="hight">
-              <p className={todo.progress}></p> <p>{todo.todo}</p>{" "}
-              <p>{todo.date}</p>{" "}
-              <button onClick={() => deletTodo(todo.id)}>Delete</button>
+              <div className={todo.progress}></div>
+              <div className="width">{todo.todo}</div>
+              <div className="width">{todo.date}</div>
+              <div className="width">
+                {" "}
+                <button onClick={() => deletTodo(todo.id)}>Delete</button>
+              </div>
             </div>
           );
         })}
