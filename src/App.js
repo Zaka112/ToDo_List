@@ -81,6 +81,7 @@ function App() {
   return (
     <div className="App">
       <h1>Add todo</h1>
+      <h2>Try adding Title, Date and Progress to see the result.</h2>
       <form>
         <label>Title:</label>{" "}
         <input 
