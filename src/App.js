@@ -74,13 +74,18 @@ function App() {
     setList(newList);
   }
 
+  function editTodo(id) {
+    const newList = list.filter((todo) => todo.id !== id);
+    setList(newList);
+  }
   return (
     <div className="App">
       <h1>Add todo</h1>
       <form>
         <label>Title:</label>{" "}
-        <input
+        <input 
           type="text"
+          
           placeholder="Title"
           required
           value={input}
@@ -123,7 +128,7 @@ function App() {
               <div className="width">
                 {" "}
                 #TODO: Edit todo
-                <button>Edit</button>
+                <button onClick={()=>editTodo(todo.id)}>Edit</button>
                 <button
                   onClick={() =>
                     confirmAlert({
