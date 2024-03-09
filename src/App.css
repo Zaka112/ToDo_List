@@ -3,10 +3,19 @@
 }
 .hight {
   display: flex;
-  justify-content: space-around;
-  align-content: space-between;
+  justify-content: space-evenly;
+  align-content: space-evenly;
   padding: 15px;
+ 
+ 
   
+}
+.statusTitle {
+  height: 30px;
+  width: 10px;
+}
+.bold{
+  font-weight: bold;
 }
 
 .width {
@@ -27,4 +36,7 @@
   height: 30px;
   width: 10px;
   background-color: green;
+}
+.footer {
+  margin: 10px;
 }

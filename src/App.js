@@ -84,9 +84,8 @@ function App() {
       <h2>Try adding Title, Date and Progress to see the result.</h2>
       <form>
         <label>Title:</label>{" "}
-        <input 
+        <input
           type="text"
-          
           placeholder="Title"
           required
           value={input}
@@ -113,13 +112,19 @@ function App() {
           <option value="not-started">not-started</option>
         </select>
       </form>
-
       <p>
         {" "}
         <button onClick={() => addTodo(input)}>Submit</button>
       </p>
       <div>
         <h1>to do list</h1>
+
+        <div className="hight bold">
+          <div className="statusTitle"> Status</div>
+          <div className="width">Title</div>
+          <div className="width">Date</div>
+          <div className="width">Action</div>{" "}
+        </div>
         {list.map((todo) => {
           return (
             <div key={todo.id} className="hight">
@@ -128,8 +133,8 @@ function App() {
               <div className="width">{todo.date}</div>
               <div className="width">
                 {" "}
-                #TODO: Edit todo
-                <button onClick={()=>editTodo(todo.id)}>Edit</button>
+                {/* #TODO: Edit todo
+                <button onClick={()=>editTodo(todo.id)}>Edit</button> */}
                 <button
                   onClick={() =>
                     confirmAlert({
@@ -155,6 +160,10 @@ function App() {
           );
         })}
       </div>
+      <div className="footer width hight">
+      <div className="not-started footer"></div> <div>= not started</div>
+      <div className="in-progress"></div> <div>= in-progress</div>
+      <div className="done"></div> <div>= done</div></div>
     </div>
   );
 }
