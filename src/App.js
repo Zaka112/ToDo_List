@@ -74,10 +74,10 @@ function App() {
     setList(newList);
   }
 
-  function editTodo(id) {
-    const newList = list.filter((todo) => todo.id !== id);
-    setList(newList);
-  }
+  // function editTodo(id) {
+  //   const newList = list.filter((todo) => todo.id !== id);
+  //   setList(newList);
+  // }
   return (
     <div className="App">
       <h1>Add todo</h1>
