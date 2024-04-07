@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { toast } from "react-toastify";
 import { confirmAlert } from "react-confirm-alert";
+import {TextField, Typography} from "@mui/material"
 
 import "./App.css";
 
@@ -82,7 +83,9 @@ function App() {
     <div className="App">
       <h1>Add todo</h1>
       <h2>Try adding Title, Date and Progress to see the result.</h2>
+     {/* <Typography variant="h6"  component="div">Title: <TextField id="standard-basic" label="Standard" variant="standard" /></Typography> */}
       <form>
+     
         <label>Title:</label>{" "}
         <input
           type="text"
